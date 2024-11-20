@@ -1,0 +1,38 @@
+GlobalInventoryData.java
+----------------------------
+1. Line 9-11: Global State.
+All data is stored in public static Hashmaps make the system hard to test and maintain.
+2. Line 12-13: Public Static Variable
+IDs are exposed as public static variables without encapsulation.
+
+InventoryManagementSystem.java
+-------------------------------
+3. Line 11-12: Hard coded values
+Warehouse data is directly hard coded in the main method
+4. Line 15-17: Magic Numbers
+Price, quantity, discount are used with magic numbers with no explanation
+5. Line 20-21: Primitive Obsession
+Using ArrayList of Integer without proper type safe collection or objects.
+
+InventorySystem.java
+-------------------------------
+6. Line 41-72: Long Method
+addProduct method is too long
+7. Line 78-98: Switch Statements
+calculateFinalPrice uses switch statements with primitive strings
+8. Line 84-87, Line 91-93: Magic Numbers
+It uses discount numbers without any explanation for any of them.
+9. Line 104-130: Duplicate code
+Similar calculation method is repeated.
+10. Line 132-167: Long Method
+processOrder methods has too much responsibility.
+
+ReportScheduler.java
+--------------------------------
+11. Line 3-6: Empty Class
+This class has no responsibility except just printing.
+
+WareHouse.java
+--------------------------------
+12. Line 4-6: Public Fields
+All info are publicly available without encapsulation
